@@ -8,39 +8,35 @@ on:
 
 jobs:
   GeneratePapers:
-    strategy:
-      fail-fast: false
-      matrix:
-        config:
-        - {name: "Training-Sustainable-Software-Dev"}
-        - {name: "Remote-Work"}
-        - {name: "RSE-Team-Management"}
     name: Generate ${{matrix.config.name}}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
-      # Be sure to update to a release https://github.com/rseng/pdf-generator
-      - name: Generate Paper
-        uses: rseng/pdf-generator@master
-        with:
-          paper_markdown: WorkshopResources/WhitePapers/${{matrix.config.name}}/paper.md
-          paper_outfile: WorkshopResources/WhitePapers/${{matrix.config.name}}.pdf
-          bibtex: WorkshopResources/WhitePapers/${{matrix.config.name}}/paper.bib
-
-          latex_template: templates/pandoc-scholar.latex
-          #png_logo: templates/logo.png
-          pdf_type: minimal
-
-          #mapping_file: _events/sorse-mapping.txt
-          #variables_file: _events/sorse-variables.txt
-      - name: setup
+      - name: Install Required Packages
+        run: |
+          sudo apt install -y --no-install-recommends wget git biber pandoc pandoc-citeproc lmodern texlive-xetex texlive texlive-latex-extra texlive-bibtex-extra texlive-publishers texlive-science texlive-fonts-recommended texlive-latex-recommended
+          wget https://github.com/jgm/pandoc/releases/download/2.10.1/pandoc-2.10.1-1-amd64.deb
+          sudo dpkg -i pandoc-2.10.1-1-amd64.deb
+      - name: Generate All Papers
+        run: |
+          template=templates/pandoc-scholar.latex
+          luafilters="--lua-filter=templates/abstract-to-meta.lua --lua-filter=templates/scholarly-metadata.lua --lua-filter=templates/template-helper.lua"
+          paperdir=WorkshopResources/WhitePapers
+          for dir in $paperdir/*/; do
+            papername=${dir##$paperdir/}
+            papername=${papername%/}
+            echo "Generating ${papername}.pdf"
+            pandoc --template=$template ${luafilters} --pdf-engine=xelatex --bibliography=${dir}paper.bib --output=${paperdir}/${papername}.pdf ${dir}paper.md
+            echo "Finished Generating ${papername}.pdf"
+          done
+      - name: Push All Papers
         env:
           GITHUB_TOKEN: ${{ secrets.BOT_TOKEN }}
         run: |
           git config user.name 'ginkgo-bot'
           git config user.email 'ginkgo.library@gmail.com'
-          git add WorkshopResources/WhitePapers/${{matrix.config.name}}.pdf
-          git commit -m "[bot] Update paper ${{matrix.config.name}}"
+          git add WorkshopResources/WhitePapers/*.pdf
+          git commit -m "[bot] Update all papers"
           git pull --rebase
           git push

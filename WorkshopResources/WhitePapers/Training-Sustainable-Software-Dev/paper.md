@@ -1,54 +1,35 @@
 ---
-title: 'Training software teams on sustainable software development: From coursework to research projects'
+title: Training software teams on sustainable software development 
+subtitle: From coursework to research projects
 keywords:
-  - remote work
-  - team organization
+  - software engineering training
+  - coursework
+  - hpc
   - research software engineering
 author:
-  # - Hartwig Anzt:
-  #     institute:
-  #       - kit
-  #       - icl
-  #     email: hartwig.anzt@kit.edu
-  #     orcid: 0000-0003-2177-952X
-  #     correspondence: "yes"
-  #     equal_contributor: "yes"
-  # - Terry Cojean:
-  #     institute:
-  #       - kit
-  #     email: terry.cojean@kit.edu
-  #     orcid: 0000-0002-1560-921X
-  - Fritz Göbel:
+  - Hartwig Anzt:
       institute:
         - kit
-      email: fritz.goebel@kit.edu
+        - icl
+      orcid: 0000-0003-2177-952X
+  - Terry Cojean:
+      institute: kit
       orcid: 0000-0002-1560-921X
-      correspondence: "yes"
-      equal_contributor: "yes"
-  # - Thomas Grützmacher:
-  #     institute:
-  #       - kit
-  #     email: thomas.gruetzmacher@kit.edu
-  #     orcid: 0000-0001-9346-2981
+  - Fritz Göbel:
+      institute: kit
+      orcid: 0000-0002-1560-921X
+  - Thomas Grützmacher:
+      institute: kit
+      orcid: 0000-0001-9346-2981
   - Pratik Nayak:
-      institute:
-        - kit
+      institute: kit
       orcid: 0000-0002-7961-1159
-      email: pratik.nayak@kit.edu
-      correspondence: "yes"
-      equal_contributor: "yes"
-  # - Tobias Ribizel:
-  #     institute:
-  #       - kit
-  #     email: ribizel@kit.edu
-  #     orcid: 0000-0003-3023-1849
-  #     correspondence: "yes"
-  #     equal_contributor: "yes"
-  # - Yu-Hsiang Tsai:
-  #     institute:
-  #       - kit
-  #     email: yu-hsiang.tsai@kit.edu
-  #     orcid: 0000-0001-5229-3739
+  - Tobias Ribizel:
+      institute: kit
+      orcid: 0000-0003-3023-1849
+  - Yu-Hsiang Tsai:
+      institute: kit
+      orcid: 0000-0001-5229-3739
 institute:
   - kit:
       name: Karlsruhe Institute of Technology
@@ -65,6 +46,8 @@ project:
 
 # Summary
 
+Below is the copy/pasted slack discussion.
+
 > PN: I guess it would include the challenges on writing code for research and how
 > to tackle them by including practical software development (git, CI, PR and so
 > on) in course-work (like we do in the course).
@@ -76,7 +59,6 @@ project:
 
 > TC: I guess related to that could be the ongoing PSE project and its dynamics with
 > the external guy able to integrate thanks to using github based PR etc.
-
 
 > PN: [Does the paper match CW21 theme?]
 

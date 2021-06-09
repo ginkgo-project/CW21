@@ -1,18 +1,18 @@
 ---
-title: 'The Shift Towards Remote Research Software Engineering During a Pandemic'
+title: The Shift Towards Remote Research Software Engineering During a Pandemic
 keywords:
   - remote work
   - team organization
   - research software engineering
 author:
-  # - Hartwig Anzt:
-  #     institute:
-  #       - kit
-  #       - icl
-  #     email: hartwig.anzt@kit.edu
-  #     orcid: 0000-0003-2177-952X
-  #     correspondence: "yes"
-  #     equal_contributor: "yes"
+  - Hartwig Anzt:
+      institute:
+        - kit
+        - icl
+      email: hartwig.anzt@kit.edu
+      orcid: 0000-0003-2177-952X
+      correspondence: "yes"
+      equal_contributor: "yes"
   - Terry Cojean:
       institute:
         - kit
@@ -20,33 +20,33 @@ author:
       orcid: 0000-0002-1560-921X
       correspondence: "yes"
       equal_contributor: "yes"
-  # - Fritz Göbel:
-  #     institute:
-  #       - kit
-  #     email: fritz.goebel@kit.edu
-  #     orcid: 0000-0002-1560-921X
-  # - Thomas Grützmacher:
-  #     institute:
-  #       - kit
-  #     email: thomas.gruetzmacher@kit.edu
-  #     orcid: 0000-0001-9346-2981
-  # - Pratik Nayak:
-  #     institute:
-  #       - kit
-  #     orcid: 0000-0002-7961-1159
-  #     email: pratik.nayak@kit.edu
-  # - Tobias Ribizel:
-  #     institute:
-  #       - kit
-  #     email: ribizel@kit.edu
-  #     orcid: 0000-0003-3023-1849
-  #     correspondence: "yes"
-  #     equal_contributor: "yes"
-  # - Yu-Hsiang Tsai:
-  #     institute:
-  #       - kit
-  #     email: yu-hsiang.tsai@kit.edu
-  #     orcid: 0000-0001-5229-3739
+  - Fritz Göbel:
+      institute:
+        - kit
+      email: fritz.goebel@kit.edu
+      orcid: 0000-0002-1560-921X
+  - Thomas Grützmacher:
+      institute:
+        - kit
+      email: thomas.gruetzmacher@kit.edu
+      orcid: 0000-0001-9346-2981
+  - Pratik Nayak:
+      institute:
+        - kit
+      orcid: 0000-0002-7961-1159
+      email: pratik.nayak@kit.edu
+  - Tobias Ribizel:
+      institute:
+        - kit
+      email: ribizel@kit.edu
+      orcid: 0000-0003-3023-1849
+      correspondence: "yes"
+      equal_contributor: "yes"
+  - Yu-Hsiang Tsai:
+      institute:
+        - kit
+      email: yu-hsiang.tsai@kit.edu
+      orcid: 0000-0001-5229-3739
 institute:
   - kit:
       name: Karlsruhe Institute of Technology

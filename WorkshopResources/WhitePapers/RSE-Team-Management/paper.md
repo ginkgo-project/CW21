@@ -1,5 +1,6 @@
 ---
-title: 'Research Software Engineering Team Management and Scalability?'
+title: Research Software Engineering Team Management and Scalability?
+subtitle: Test Subtitle
 keywords:
   - software engineering scalibility
   - team management
@@ -9,53 +10,35 @@ author:
       institute:
         - kit
         - icl
-      email: hartwig.anzt@kit.edu
       orcid: 0000-0003-2177-952X
-      correspondence: "yes"
-      equal_contributor: "yes"
   - Terry Cojean:
-      institute:
-        - kit
-      email: terry.cojean@kit.edu
+      institute: kit
       orcid: 0000-0002-1560-921X
-      correspondence: "yes"
-      equal_contributor: "yes"
-  # - Fritz Göbel:
-  #     institute:
-  #       - kit
-  #     email: fritz.goebel@kit.edu
-  #     orcid: 0000-0002-1560-921X
-  # - Thomas Grützmacher:
-  #     institute:
-  #       - kit
-  #     email: thomas.gruetzmacher@kit.edu
-  #     orcid: 0000-0001-9346-2981
-  # - Pratik Nayak:
-  #     institute:
-  #       - kit
-  #     orcid: 0000-0002-7961-1159
-  #     email: pratik.nayak@kit.edu
+  - Fritz Göbel:
+      institute: kit
+      orcid: 0000-0002-1560-921X
+  - Thomas Grützmacher:
+      institute: kit
+      orcid: 0000-0001-9346-2981
+  - Pratik Nayak:
+      institute: kit
+      orcid: 0000-0002-7961-1159
   - Tobias Ribizel:
-      institute:
-        - kit
-      email: ribizel@kit.edu
+      institute: kit
       orcid: 0000-0003-3023-1849
-      correspondence: "yes"
-      equal_contributor: "yes"
-  # - Yu-Hsiang Tsai:
-  #     institute:
-  #       - kit
-  #     email: yu-hsiang.tsai@kit.edu
-  #     orcid: 0000-0001-5229-3739
+  - Yu-Hsiang Tsai:
+      institute: kit
+      orcid: 0000-0001-5229-3739
 institute:
   - kit:
       name: Karlsruhe Institute of Technology
       address: Baden-Württemberg, Germany
   - icl:
-      name: Innovative Computing Laboratory
+      name: Innovative Computing Laboratory, University of Tennessee, Knoxville
       address: University of Tennessee, Knoxville, USA
 bibliography: paper.bib
 link-citations: true
+colorlinks: true
 project:
   title: The Ginkgo Project
   github-url: https://github.com/ginkgo-project/ginkgo/
@@ -65,21 +48,23 @@ project:
 
 This is a temporary title, please change it.
 
+
 There are maybe two central ideas:
-+ RSE team scalability in terms of engineering tasks and role attribution and
+- RSE team scalability in terms of engineering tasks and role attribution and
   sharing per person (see Tobias roles, to which we can add scientist and)
-+ RSE team scalability in terms of governance, financing, PR and organization
+- RSE team scalability in terms of governance, financing, PR and organization
   (single PI model doing most PR/financial aspects etc maybe doesn't scale above
   a certain threshold).
   
   
 With possible solutions:
-+ Creating a position similar like a scientific manager person, able to manage
+- Creating a position similar like a scientific manager person, able to manage
   role attribution of people and help with proposals, etc. Issues: should be
   **very** flexible and keep research freedom nonetheless (it's not 100% a company).
-+ Flexibility in team organization (multiple persons are both proposal pushers,
+- Flexibility in team organization (multiple persons are both proposal pushers,
   code reviewers, developers, ...), but requires strict and coherent personnel
   scheduling.
+
 
 ## TC: initial exposition
 I guess yet another idea is something we discussed with Hartwig sometimes. It's
