@@ -1,0 +1,41 @@
+name: generate-pdf-folder-artifacts
+
+on:
+  pull_request: []
+  push:
+    branches:
+     - master
+
+jobs:
+  GeneratePapers:
+    strategy:
+      fail-fast: false
+      matrix:
+        config:
+        - {name: "Training-Sustainable-Software-Dev"}
+        - {name: "Remote-Work"}
+        - {name: "RSE-Team-Management"}
+    name: Generate ${{matrix.config.name}}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+      # Be sure to update to a release https://github.com/rseng/pdf-generator
+      - name: Generate Paper
+        uses: rseng/pdf-generator@master
+        with:
+          paper_markdown: WorkshopResources/WhitePapers/${{matrix.config.name}}/paper.md
+          paper_outfile: ${{matrix.config.name}}.pdf
+          bibtex: WorkshopResources/WhitePapers/${{matrix.config.name}}/paper.bib
+
+          latex_template: templates/ginkgo.tex
+          png_logo: templates/logo.png
+          pdf_type: pdf
+
+          #mapping_file: _events/sorse-mapping.txt
+          #variables_file: _events/sorse-variables.txt
+      - name: Upload pdfs as artifacts
+        uses: actions/upload-artifact@v2-preview
+        with:
+          name: ${{matrix.config.name}}
+          path: ${{matrix.config.name}}.pdf
