@@ -1,8 +1,8 @@
 ---
-title: ''
+title: 'Research Software Engineering Team Management and Scalability?'
 tags:
-  - remote work
-  - team organization
+  - software engineering scalibility
+  - team management
   - research software engineering
 authors:
   - name: Hartwig Anzt
