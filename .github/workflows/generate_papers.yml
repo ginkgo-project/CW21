@@ -28,7 +28,7 @@ jobs:
           paper_outfile: WorkshopResources/WhitePapers/${{matrix.config.name}}.pdf
           bibtex: WorkshopResources/WhitePapers/${{matrix.config.name}}/paper.bib
 
-          #latex_template: templates/ginkgo.tex
+          latex_template: templates/pandoc-scholar.latex
           #png_logo: templates/logo.png
           pdf_type: minimal
 
