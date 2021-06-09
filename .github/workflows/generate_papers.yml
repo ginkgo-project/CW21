@@ -25,7 +25,7 @@ jobs:
         uses: rseng/pdf-generator@master
         with:
           paper_markdown: WorkshopResources/WhitePapers/${{matrix.config.name}}/paper.md
-          paper_outfile: ${{matrix.config.name}}.pdf
+          paper_outfile: WorkshopResources/WhitePapers/${{matrix.config.name}}.pdf
           bibtex: WorkshopResources/WhitePapers/${{matrix.config.name}}/paper.bib
 
           #latex_template: templates/ginkgo.tex
@@ -34,8 +34,13 @@ jobs:
 
           #mapping_file: _events/sorse-mapping.txt
           #variables_file: _events/sorse-variables.txt
-      - name: Upload pdfs as artifacts
-        uses: actions/upload-artifact@v2-preview
-        with:
-          name: ${{matrix.config.name}}
-          path: ${{matrix.config.name}}.pdf
+      - name: setup
+        env:
+          GITHUB_TOKEN: ${{ secrets.BOT_TOKEN }}
+        run: |
+          git config user.name 'ginkgo-bot'
+          git config user.email 'ginkgo.library@gmail.com'
+          git add WorkshopResources/WhitePapers/${{matrix.config.name}}.pdf
+          git commit -m "[bot] Update paper ${{matrix.config.name}}"
+          git pull --rebase
+          git push
