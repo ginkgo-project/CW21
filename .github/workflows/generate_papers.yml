@@ -1,10 +1,6 @@
 name: generate-pdf-folder-artifacts
 
-on:
-  pull_request: []
-  push:
-    branches:
-     - master
+on: [push, pull_request]
 
 jobs:
   GeneratePapers:
